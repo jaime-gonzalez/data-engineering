@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: ft_sales
+    columns:
+      - name: sale_date
+        tests:
+          - not_null
+      - name: store_id
+        tests:
+          - not_null
+      - name: product_id
+        tests:
+          - not_null

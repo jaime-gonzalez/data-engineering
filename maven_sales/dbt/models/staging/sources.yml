@@ -1,0 +1,33 @@
+version: '1.0.0'
+config-version: 2
+
+sources:
+  - name: raw
+    database: maven_dw
+    schema: staging
+    config:
+      enabled: true
+    tables:
+      - name: inventory
+        loaded_at_field: insertion_date
+        freshness:
+          warn_after: {count: 18, period: hour}
+          error_after: {count: 24, period: hour}
+  
+      - name: products
+        loaded_at_field: insertion_date
+        freshness:
+          warn_after: {count: 18, period: hour}
+          error_after: {count: 24, period: hour}
+      
+      - name: sales
+        loaded_at_field: insertion_date
+        freshness:
+          warn_after: {count: 18, period: hour}
+          error_after: {count: 24, period: hour}
+      
+      - name: stores
+        loaded_at_field: insertion_date
+        freshness:
+          warn_after: {count: 18, period: hour}
+          error_after: {count: 24, period: hour}

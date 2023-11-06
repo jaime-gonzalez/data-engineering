@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dm_products
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+      - name: product_name
+        tests:
+          - unique
+          - not_null
+      - name: product_category
+        tests:
+          - not_null
+      - name: product_cost
+        tests:
+          - not_null
+      - name: product_price
+        tests:
+          - not_null
+      

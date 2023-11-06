@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dm_stores
+    columns:
+      - name: store_id
+        tests:
+          - unique
+          - not_null
+      - name: store_name
+        tests:
+          - unique
+          - not_null
+      - name: store_city
+        tests:
+          - not_null
+      - name: store_location
+        tests:
+          - not_null
+      - name: store_open_date
+        tests:
+          - not_null
