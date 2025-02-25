@@ -1,3 +1,0 @@
-from common.extractors import zipFileExtractor
-from common.readers import sparkFileReader
-from common.config import schema_file_path,credentials_file_path,jdbc_path
